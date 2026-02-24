@@ -136,6 +136,7 @@ app.post("/api/check", (req, res) => {
   }
 
   res.json({
+    meta: { version: "v2-2026-02-24" },
     summary: { checked_pairs: results.length },
     pairs: results,
   });
