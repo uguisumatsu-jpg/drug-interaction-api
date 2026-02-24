@@ -71,6 +71,8 @@ function pmdaSearchUrl(query) {
 }
 
 app.post("/api/check", (req, res) => {
+  console.log("DEBUG /api/check called. body:", req.body);
+  
   const drugsRaw = req.body?.drugs;
 
   if (!Array.isArray(drugsRaw) || drugsRaw.length < 2) {
