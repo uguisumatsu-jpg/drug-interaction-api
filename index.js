@@ -109,6 +109,7 @@ app.post("/api/check", (req, res) => {
       }
 
       const pairKey = makePairKey(keyA, keyB);
+      console.log("DEBUG keys:", keyA, keyB, pairKey);
       const hit = INTERACTIONS[pairKey];
 
       if (hit) {
