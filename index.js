@@ -29,16 +29,11 @@ const DRUG_SYNONYMS = {
 // 2) 相互作用DB（成分キー×成分キー）
 // keyは "a|b"（a<bでソートしたもの）で統一
 const INTERACTIONS = {
-  // 例：NSAIDs + ACEi（腎機能低下/高Kなど）
   "enalapril|loxoprofen": {
     severity: "Medium",
     description:
       "NSAIDs併用で腎血流低下→ACE阻害薬の降圧効果減弱や腎機能悪化の可能性。高齢・脱水・CKDでは注意。腎機能/電解質モニター推奨。",
-    // PMDAは「根拠確認」用に検索URLを返す（スクレイピングしない）
-  },
-
-  // 例：クラリスロマイシン +（CYP3A4基質薬があれば追加していく）
-  // "drugA|clarithromycin": {...}
+  }
 };
 
 // 日本語の表記ゆれ吸収（最小）
